@@ -32,7 +32,9 @@ main{
     grid-area: header;
     background-color: #F3610E;
 }
+.boton{
 
+}
 .volver{
     grid-area: boton;
     text-align: center;
@@ -169,10 +171,12 @@ main{
     }
     .volver{
         margin: 140px 60px 0 500px;
-    
 
-    
 }
+.box-login{
+    max-width: 100%;
+}
+
 
 /*Resolución media*/
 @media screen and(min-width:1024px) {

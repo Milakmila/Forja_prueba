@@ -34,7 +34,7 @@ button{
 .header{
     justify-self: center;
     grid-template-areas: 
-    "logo"
+    "logo" 
     "logovacuna"
     "boton"
     "telefono" 
@@ -156,7 +156,6 @@ button{
     background-image: url(../imagenes/4.\ covid.jpeg);
     max-width: 100%;
     background-color:  rgba(255, 255, 255, 0.747);
-    gap: 20px;
     
 }
 .signos{
@@ -252,26 +251,24 @@ button{
 
 /*Resolución tabletas*/
 @media screen and (min-width:768px) {
-    
+    /*Las grid en grid areas de rows estan muy pequeñas para esto por eso no centran*/
     .header{
         grid-template-areas: 
-        "logo logovacuna boton"
         "logo telefono ubicacion"
+        "logo logovacuna boton"
         "linea linea linea"
     ;
+    grid-template-columns: auto  ;
     }
     .logo{
-        border: 2px solid red;
         justify-self:left;
     }
     .LogoVacuna {
-        border: 2px solid pink;
         max-width: 40%;
         justify-self: left;
       
     }
     .boton{
-        border: 2px solid red;
         max-width: 100%;
     
     }
@@ -308,6 +305,7 @@ button{
     #infos{
         grid-template-areas:
             "signos quehacer";
+            grid-template-columns: 50% 50%;
     }
     .subtitulos{
         grid-template-columns: 5em 10em;
