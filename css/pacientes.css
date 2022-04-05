@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Rufous:#A40101;
+    --Viridian-green: rgb(44, 163, 171);
+    --Silver:#C4C4C4;
+    --Orange:#F3610E;
+    --Cadet: rgb(29, 27, 69);
+}
+body{
+    font-family:'Poppins', sans-serif;
+    font-size: 1em;
+}
+h1,h2,h3{
+    color: var(--Orange);
+}
+
+p{
+   color: black; 
+   font-size: 1em;
+}
+.superior{
+    background-color:#18182a;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 197px;
+
+}
+.superior img{
+    margin-right: 90rem;
+}
+.superior i{
+    background-color: white;
+    padding: 0.8rem;
+    align-items: flex-end;
+    margin: 0.9rem ;
+    border-radius: 50%;
+    border-color: #2CA3AB;
+    border-style: solid ;
+    border-width: 2px;
+}
+
+.abajosub{
+    margin-top: 1px;
+}  
+#botones{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 28rem;
+}
+#distancia{
+    margin-top: 120px;
+}
+.agregar{
+    background-color: var(--Orange);
+    padding:0.5rem ;
+    border-radius: 4px;
+    border-color: #2CA3AB;
+    border-style: solid ;
+    border-width: 1px;
+    outline: none;
+
+}
+.agregar a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+#search2{
+    width:150px ;
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: var(--Viridian-green);
+  
+}
+.pacientes {
+    color: #1D1B45;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight:400 ;
+    text-align: center;
+    height: 350px;
+
+}
+.buscar2{
+    width: 2.5rem;
+    height: 1.8rem;
+    background-color: var(--Cadet);
+    border-color: var(--Viridian-green);
+    border-width: 3.5px;
+    border-radius: 5px;
+   
+
+}
+.titulopa h3{
+    text-align: center;
+    color: #1D1B45;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 2rem;
+}
+#table{
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+}
+table{
+    background-color: #2CA3AB;
+}
+
+#table th {
+    background-color: #1D1B45;
+    color: white;
+    padding: 0.9rem 2rem;
+    font-weight: 400;
+}
+#table td {
+    background-color: #C4C4C4;
+}
+.form-group3{
+    margin:0.3rem 3rem;
+    
+}
+
+.btn-azul{
+    background-color: #2CA3AB;
+    border-radius: 4px;
+    height: 2rem;
+    border-color: #2CA3AB;
+    border-style: solid ;
+    border-width: 1px;
+    outline: none;
+    margin-right: 0.4rem;
+}
+.btn-rojo{
+    height: 2.1rem;
+    font-weight: 500;
+    background-color: #A40101;
+    border-radius: 4px;
+    border-color: #A40101;
+    border-style: solid ;
+    border-width: 1px;
+    outline: none;
+    color: white;
+    text-decoration: none;
+}

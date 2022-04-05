@@ -42,7 +42,7 @@ a:focus{color: #A40101;}
     "left"
     "info";
 }
-#izquierda{
+nav{
     grid-area: left;
     display: grid;
     align-items: center;
@@ -50,13 +50,10 @@ a:focus{color: #A40101;}
     max-width:21em;
   
 }
-
 #izquierda img{
-    margin: 6rem 0.8rem;
     align-self: center;
     
 }
-
 #izquierda i{
     display:grid;
     justify-content: center;
@@ -68,22 +65,41 @@ a:focus{color: #A40101;}
 #izquierda h4{
     margin: 0rem 0rem
 }
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~.items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+
+}
+.btn-menu{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;/*Al pasar por encima muestra la manito*/
+}
+.items{
+    width: 100vw;
+    display: none;
+
+}
 
 .box-izquierda{
+    padding: 0.2rem;
+    text-decoration: none;
+    color: white;
     display: grid;
     text-align: center;
     justify-self: center;
     background-color: #C4C4C4;
-    min-width: 18em;
-    max-width: 100%;
-    margin: 1rem 0rem;
+    margin: 1rem auto;
     border-radius: 10px;
     border-color: var(--Orange);
     border-style: solid ;
     border-width: 3px;
     outline: none;
 }
-
 .box-izquierda a{
     text-decoration: none;
 }
@@ -94,12 +110,9 @@ a:focus{color: #A40101;}
 }
 
 .box-izquierda:hover{
-    background-color:var(--Orange);
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function:ease-in-out;
-    transition-delay: 1s;}
- 
+    color: var(--Orange);
+}
+
 
 .user{
     max-width: 100%;
