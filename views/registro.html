@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/registro.css">
+    <link rel="stylesheet" type="text/css" href="../css/registro.css">
     <title>Registro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,65 +15,75 @@
 <body>
     <header>
         <div class="superior">
-            <img src="imagenes/0. logoforja.png">
+            <div class="logo">
+            <img src="../imagenes/0. logoforja.png">
+    
+             </div>
+            <div class="user">
             <a href="dashboard.html">
-                <i class="fa-solid fa-house-user"></i>
-                </a>
+            <i class="fa-solid fa-house-user user"></i>
+            </a>
+            </div>
+    
+            <div class="off">
                 <a href="index.html">
-                <i class="fa-solid fa-power-off"></i>
+                <i class="fa-solid fa-power-off off"></i>
                 </a>
-                <div class="abajosub"> <!--REvisar el class porque esta en dashboard-->
-                    <img src="imagenes/12. franja.svg">
-                </div>
-        </header>
+            </div>
+    
+            <div class="abajosub"> <!--REvisar el class porque esta en dashboard-->
+                <img  class="franja" src="../imagenes/12. franja.svg">
+            </div>
+        </div>
+    </header>
 <main>
     <div class="tituloforms">
         <h1>Registro Usuario Nuevo</h1>
     </div>
     <section id="forms">
     
-    <div>
-        <input class="form-label" type="date" id="date" name="fecha"> <!--min y max para no mostrar todas las fechas-->
-        <input class="form-label"  name="Registro" id="registro" type="number" placeholder="N registro" required="number"> 
-    </div>
-    <div class="divisionforms">
-        <i class="fa-solid fa-user icon3"></i>
-        <h4>DATOS DEL PACIENTE</h4>
-    </div>
-    <div class="form-group">
-            <input  class="form-label-largo"  name="nombre" id="nombre" type="text" placeholder="Escribe el nombre" required="text"> 
-    
-            <input class="form-label-largo"   name="apellidos" id="apellidos" type="text" placeholder="Apellidos" required="text"> 
-    </div>
-    <div class="form-group">
-        <input class="form-label-largo"    name="identificacion" id="identificacion" type="number" placeholder="Numero de identificacion" required="number" max="10"> 
+        <div class="fila1">
+            <input class="form-label" type="date" id="date" name="fecha"> <!--min y max para no mostrar todas las fechas-->
+            <input class="form-label"  name="Registro" id="registro" type="number" placeholder="N registro" required="number"> 
+        </div>
+        <div class="divisionforms">
+            <i class="fa-solid fa-user icon3"></i>
+            <h4>DATOS DEL PACIENTE</h4>
+        </div>
+        <div class="fila2">
+                <input  class="form-label-largo"  name="nombre" id="nombre" type="text" placeholder="Escribe el nombre" required="text"> 
+        
+                <input class="form-label-largo"   name="apellidos" id="apellidos" type="text" placeholder="Apellidos" required="text"> 
+        </div>
+        <div class="fila3">
+            <input class="form-label-largo"    name="identificacion" id="identificacion" type="number" placeholder="Numero de identificacion" required="number" max="10"> 
         
     
-    <select class="form-label-largo"  name="select" id="tipodoc"> 
-            <option value="0" selected>Tipo de documento</option>
+            <select class="form-label-largo"  name="select" id="tipodoc"> 
+                <option value="0" selected>Tipo de documento</option>
                 <option value="1">Cedula de ciudadania</option>
                 <option value="2">Tarjeta de identidad</option>
                 <option value="3">Pasaporte</option>
                 <option value="4">Registro civil</option>
-    </select>
+            </select>
 
         
-    </div>
+        </div>
     
-    <div class="form-group">
-        <input class="form-label-largo" type="date" id="date" name="fecha"> 
+        <div class="fila4">
+            <input class="form-label-largo" type="date" id="date" name="fecha"> 
         
-        <input class="form-label-largo"   name="edad" id="edad" type="number" placeholder="Edad" required="number">   
+            <input class="form-label-largo"   name="edad" id="edad" type="number" placeholder="Edad" required="number">   
         
-    </div>
+        </div>
     
 
-    <div class="divisionforms">
-        <i class="fa-solid fa-location-dot icon3"></i>
-        <h4>INFORMACIÓN PACIENTE</h4>
-    </div>  
-    <div class="form-group">
-        <label for="departamento"></label>
+        <div class="divisionforms-2">
+            <i class="fa-solid fa-location-dot icon3"></i>
+            <h4>INFORMACIÓN PACIENTE</h4>
+        </div>  
+        <div class="fila5">
+            <label for="departamento"></label>
             <select class="form-label-largo"   name="departamento" id="departamento"> 
                 <option value="0" selected>Departamento de residencia</option>
                     <option value="1">Cundinamarca</option>
@@ -109,10 +119,10 @@
                     <option value="31">Vaupés</option>
                     <option value="32">Vichada</option>
             </select>
-        <label for="municipio"></label>
-        <label for="city" ></label>
+
+       
         <select class="form-label-largo"  id="city" required>
-            <option value="">Selecciona una opción...</option>
+            <option value="">Municipio de residencia</option>
             <option value="Abejorral">Abejorral</option>
             <option value="Abrego">Abrego</option>
             <option value="Abriaquí">Abriaquí</option>
@@ -1234,25 +1244,25 @@
             <option value="Zona Bananera">Zona Bananera</option>
         </select>
 
-    </div>
-    <div class="form-group">
-        <input class="form-label-largo" name="direccion" id="direccion" type="text" type="number" placeholder="Dirección" required> 
+        </div>
+        <div class="fila6">
+            <input class="form-label-largo" name="direccion" id="direccion" type="text" type="number" placeholder="Dirección" required> 
 
-        <input class="form-label-largo"  type="email"id="mail" name="email"placeholder="Correo">
-    </div>
-    <div class="form-group">
-        <input class="form-label-largo"  name="telefono" id="telefono" type="number" placeholder="Telefono fijo" required> 
+            <input class="form-label-largo"  type="email"id="mail" name="email"placeholder="Correo">
+        </div>
+        <div class="fila7">
+            <input class="form-label-largo"  name="telefono" id="telefono" type="number" placeholder="Telefono fijo" required> 
 
-        <input class="form-label-largo"  name="celular" id="celular" type="number" placeholder="Celular" required> 
-    </div>
-        <div class="divisionforms">
+            <input class="form-label-largo"  name="celular" id="celular" type="number" placeholder="Celular" required> 
+        </div>
+        <div class="divisionforms-3">
             <i class="fa-solid fa-heart-pulse icon3"></i><!--Icono location-->
             <h4>ESTADO DE SALUD</h4><!--Imagen de corazon con signos vitales-->
         </div> 
-    <div class="form-group">
-        <label for="preexistencias"></label>
-            <select class="form-label-last"  name="preexistencias" id="preexistencias"> 
-                <option value="0" selected>Preexistencias</option> <!--HAyq ue escribir todosss-->
+        <div class="fila8">
+            <label for="preexistencias"></label>
+                <select class="form-label-last"  name="preexistencias" id="preexistencias"> 
+                    <option value="0" selected>Preexistencias</option> <!--HAyq ue escribir todosss-->
                     <option value="1">Alcoholismo</option>
                     <option value="2">Anemia Hemolítica</option>
                     <option value="3">Aneurismas</option>
@@ -1282,10 +1292,10 @@
                     <option value="27">Síndrome PWP</option>
                     <option value="28">Transplantes (excepto el de córnea)</option>
                     <option value="29">VIH/SIDA</option>
-            </select> 
-        <label for="discapacidad"></label>
-            <select class="form-label-last"  name="discapacidad" id="discapacidad"> 
-                <option value="0" selected>Discapacidad</option> <!--HAyq ue escribir todosss-->
+                </select> 
+            <label for="discapacidad"></label>
+                <select class="form-label-last"  name="discapacidad" id="discapacidad"> 
+                    <option value="0" selected>Discapacidad</option> <!--HAyq ue escribir todosss-->
                     <option value="1">Discapcidad física</option>
                     <option value="2">Discapacidad auditiva</option>
                     <option value="3">Discapacidad visual</option>
@@ -1294,28 +1304,29 @@
                     <option value="6">Discapacidad psicosoial (mental)</option>
                     <option value="7">Discapacidad Múltiple</option>
                     
-            </select> 
+                </select> 
             <input class="form-label-last"  name="alergias" id="alergias" type="text" placeholder="Alergias" required> 
 
-    </div>
-    <div class="sino">
-    <label form="respuesta">El paciente se ha realizado la prueba del covid con anterioridad y esta ha salido positiva?</label>
-    <br>
-            <input name="respuesta" id="respuesta" type="radio" checked>Si
-            <input name="respuesta" id="respuesta" type="radio" checked>No
-    </div>
-    <div class="sino">
-    <label form="respuesta1" >El paciente ha tenido un contacto estrecho o cercano con una persona confirmada o sospechoso COVID-19 en los últimos 14 días?</label>
-        <br>
-        <input name="respuesta2" id="respuesta2" type="radio" checked>Si
-        <input name="respuesta2" id="respuesta2" type="radio" checked>No
-    </div>
+        </div>
+        <div class="sino">
+            <label form="respuesta">El paciente se ha realizado la prueba del covid con anterioridad y esta ha salido positiva?</label>
+            <br>
+                <input name="respuesta" id="respuesta" type="radio" checked>Si
+                <input name="respuesta" id="respuesta" type="radio" checked>No
+        </div>
+        <div class="sino2">
+            <label form="respuesta1" >El paciente ha tenido un contacto estrecho o cercano con una persona confirmada o sospechoso COVID-19 en los últimos 14 días?</label>
+            <br>
+            <input name="respuesta2" id="respuesta2" type="radio" checked>Si
+            <input name="respuesta2" id="respuesta2" type="radio" checked>No
+        </div>
 
     </section>
+
     <div class="agregar-button" >
-    <button class="agregar"> <a href="dashboard.html" >Guardar</a>
-        <i class="fa-solid fa-user icon"></i>
-        </button> 
+        <button class="agregar"> <a href="dashboard.html" >Guardar</a>
+            <i class="fa-solid fa-user icon"></i>
+            </button> 
     </div>
 </main>
 <footer>

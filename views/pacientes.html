@@ -18,20 +18,29 @@
 <body>
     <header>
     <div class="superior">
-        <img src="imagenes/0. logoforja.png">
+        <div>
+        <img src="../imagenes/0. logoforja.png">
+
+         </div>
+        <div class="user">
         <a href="dashboard.html">
-        <i class="fa-solid fa-house-user"></i>
+        <i class="fa-solid fa-house-user user"></i>
         </a>
-        <a href="index.html">
-        <i class="fa-solid fa-power-off"></i>
-        </a>
+        </div>
+
+        <div class="off">
+            <a href="index.html">
+            <i class="fa-solid fa-power-off off"></i>
+            </a>
+        </div>
+
         <div class="abajosub"> <!--REvisar el class porque esta en dashboard-->
-            <img src="imagenes/12. franja.svg">
+            <img  class="franja" src="../imagenes/12. franja.svg">
         </div>
     </div>
     </header>
 
-    <main>
+    <main class="container-main">
         <section id="distancia">
             
             <section id="botones">
@@ -41,7 +50,7 @@
             <div>
             <label for="buscar"></label>
                 <input  class="form-label" type="search2" name="search" id="search2" placeholder=" Numero de documento ">
-                <a href="pacientes.html">
+                <a href="/css/pacientes.css">
                     <button class="buscar2"> <i class="fa-solid fa-magnifying-glass buscador icon"></i>
                     </button>
                     </a>
@@ -52,145 +61,248 @@
             <h3>PACIENTES</h3>
         </div>
         </div>
-        <section id="table">
-   
-            <table>
+        <div class="table-box">
+        <table class="cotainer-table1">
             <tr>
-                <th># DE REGISTRO</th>
-                <th># DOCUMENTO</th>
+                <th>#DE REGISTRO</th>
                 <th>NOMBRES</th>
+                <th>EDAD</th>
+            </tr>
+    
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+        </table>
+        <table class="container-table2">
+            <tr>
                 <th>APELLIDOS</th>
                 <th>EDAD</th>
-                <th>ACCIONES</th>
+                <th colspan="2">ACCIONES</th>
             </tr>
-            <tr> <!--Esta info se queda asi-->
-                <td>111</td>
-                <td>456231</td>
-                <td>Paola</td>
-                <td>Perezeses</td>
-                <td>2+16</td>
-                <td>
-                    <div class="form-group3">
-                        <button class="btn-azul">
-                        Editar
-                        <i class="fa-solid fa-pen"></i>
-                        </button>
+    
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td> 
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
             
-                        <button class="btn-rojo">
-                            Eliminar
-                            <i class="fa-solid fa-rectangle-xmark icon"></i>
-                            </button>
-                    </div>
-        
-                </td>
-            </tr>
-        <tr>
-            <td>210236</td>
-            <td>654+656+</td>
-            <td>Ingrid</td>
-            <td>Perez</td>
-            <td>33</td>
-            <td>
-                <div class="form-group3">
-                    <button class="btn-azul">
-                    Editar
-                    <i class="fa-solid fa-pen"></i>
+        </table>
+    </div>
+    <!--<section id="container-table">
+
+            <div class="table-header table-1"># DE REGISTRO</div>
+            <div class="table-header "># DOCUMENTO</div>
+            <div class="table-header table-2">NOMBRES</div>
+            <div class="table-header apellido ">APELLIDOS</div>
+            <div class="table-header table-3">EDAD</div>
+            <div class="table-header ">ACCIONES</div>
+
+            <div class="numero table-11">
+            <div class="table-item">111</div>
+            <div class="table-item ">456231</div>
+            </div>
+            <div class="nombres table-22">
+            <div class="table-item ">Paola</div>
+            <div class="table-item table-223">Perezeses</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">2+16</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
                     </button>
- 
-                    <button class="btn-rojo">
-                        Eliminar
-                        <i class="fa-solid fa-rectangle-xmark icon"></i>
-                        </button>
-                </div>
-        
-            </td>
-        </tr>
-        <tr>
-            <td>152552</td>
-            <td>10190081492</td>
-            <td>Camilo</td>
-            <td>Sarmiento</td>
-            <td>28</td>
-            <td>
-                <div class="form-group3">
-                    <button class="btn-azul">
-                    Editar
-                    <i class="fa-solid fa-pen"></i>
+            </div>
+            </div>
+
+        <div class="numero">
+            <div class="table-item">2039293</div>
+            <div class="table-item table-11">45623189</div>
+            </div>
+            <div class="nombres">
+            <div class="table-item table-22 ">Ingrid</div>
+            <div class="table-item ">Perez</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">33</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
                     </button>
-  
-                    <button class="btn-rojo">
-                        Eliminar
-                        <i class="fa-solid fa-rectangle-xmark icon"></i>
-                        </button>
-                </div>
-        
-            </td>
-        </tr>
-        <tr>
-            <td>121212</td>
-            <td>1019081492</td>
-            <td>Ingrid</td>
-            <td>Paba</td>
-            <td>28</td>
-            <td>
-                <div class="form-group3">
-                    <button class="btn-azul">
-                    Editar
-                    <i class="fa-solid fa-pen"></i>
+            </div>
+        </div>
+
+        <div class="numero">
+            <div class="table-item">279304</div>
+            <div class="table-item table-11">428390109</div>
+            </div>
+            <div class="nombres">
+            <div class="table-item table-22 ">Camilo</div>
+            <div class="table-item ">Sarmiento</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">28</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
                     </button>
-   
-                    <button class="btn-rojo">
-                        Eliminar
-                        <i class="fa-solid fa-rectangle-xmark icon"></i>
-                        </button>
-                </div>
-        
-            </td>
-        </tr>
-        <tr>
-            <td>12123</td>
-            <td>101965842</td>
-            <td>Sandra</td>
-            <td>Paba</td>
-            <td>28</td>
-            <td>
-                <div class="form-group3">
-                    <button class="btn-azul">
-                    Editar
-                    <i class="fa-solid fa-pen"></i>
+            </div>
+        </div>
+
+        <div class="numero">
+            <div class="table-item">121212</div>
+            <div class="table-item table-11">1019081492</div>
+            </div>
+            <div class="nombres">
+            <div class="table-item table-22 ">Ingrid</div>
+            <div class="table-item ">Paba</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">28</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
                     </button>
-      
-                    <button class="btn-rojo">
-                        Eliminar
-                        <i class="fa-solid fa-rectangle-xmark icon"></i>
-                        </button>
-                </div>
-        
-            </td>
-        </tr>
-        <tr>
-            <td>165231</td>
-            <td>1033956043</td>
-            <td>Diana Carolina</td>
-            <td>Guitierrez</td>
-            <td>35</td>
-            <td>
-                <div class="form-group3">
-                    <button class="btn-azul">
-                    Editar
-                    <i class="fa-solid fa-pen"></i>
+            </div>
+        </div>
+
+        <div class="numero">
+            <div class="table-item">12123</div>
+            <div class="table-item table-11">1101965842</div>
+            </div>
+            <div class="nombres">
+            <div class="table-item table-22 ">Sandra</div>
+            <div class="table-item ">Paba</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">31</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
                     </button>
- 
-                    <button class="btn-rojo">
-                        Eliminar
-                        <i class="fa-solid fa-rectangle-xmark icon"></i>
-                        </button>
-                </div>
+            </div>
+        </div>
+                
         
-            </td>
-        </tr>
-    </table>
-    </section>
+        <div class="numero">
+            <div class="table-item">165231</div>
+            <div class="table-item table-11">1033956043</div>
+            </div>
+            <div class="nombres">
+            <div class="table-item table-22 ">Diana</div>
+            <div class="table-item ">Guitierrez</div>
+            </div>
+            <div class="demas">
+            <div class="table-item table-33">35</div>
+            <div class="table-item">
+                <button class="btn-azul">
+                <h4>Editar</h4>
+                <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="btn-rojo">
+                    <h4>Eliminar</h4>
+                    <i class="fa-solid fa-rectangle-xmark icon"></i>
+                    </button>
+            </div>
+        </div>
+    -->        
+             
+
+     </section>
     </main>
     
     <footer>
