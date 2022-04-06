@@ -21,7 +21,7 @@
 
 body{
     font-family:'Poppins', sans-serif;
-    font-size: 1.2em;
+    font-size: 0.9em;
 
 }
 main{
@@ -32,14 +32,15 @@ main{
     grid-area: header;
     background-color: #F3610E;
 }
-.boton{
+#boton{
+    justify-self: center;
+    
 
 }
 .volver{
     grid-area: boton;
     text-align: center;
-    align-self: center;
-    justify-self: center;
+    
     bottom: 50px;
     background-color:var(--Cadet);
     border-color: #2CA3AB;
@@ -57,6 +58,8 @@ main{
     color: white;
     font-weight: 600;
 }
+
+/*
 .wrapper {
     align-self: center;
     justify-self: center;
@@ -67,20 +70,19 @@ main{
     grid-template-areas:
       ". box-login ."
       ". box-login .";
-  }
+    margin:  100px;
+
+  }*/
 #box-login{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     grid-area: box-login;
     align-self: center;
     justify-self: center;
-
-    max-width:100%;
+    max-width:90%;
   background-color: whitesmoke;
   border-width: 2px;
   border-radius: 0.8rem;
+  margin: 30% 5% ;
+
   
 }
 .form-group-login{
@@ -103,7 +105,14 @@ main{
     border-width: 0.5px;
     outline: none;
 }
+.encabezado img{
+    max-width: 100%;
+}
+.encabezado p{
+    text-align: center;
+    font-size: 0.9em;
 
+}
 .form-label-login{
     border-radius: 1rem;
     background-color: rgba(44, 163, 171,0.15);
@@ -143,17 +152,20 @@ main{
 #ingresar{
     grid-row: 7;
     grid-column: 2;
+   justify-self: center;
     border-radius: 10px;
-    position: relative;
-    left: 60px;
     font-family:'Poppins', sans-serif;
     background-color: var(--Orange);
     border-color: var(--Cadet);
     border-color: rgba(11, 87, 149,1) ;
     border-style: solid ;
     border-width: 1px;
-    max-width: 50%;
+    max-width: 100%;
+    padding: 0.2rem;
     outline: none;
+    transition: all 0.3s ease-in-out 0s;
+    background: linear-gradient(90deg, var(--Viridian-green) 0%,var(--Orange) 100%);
+    border: none;
 }
 
 #ingresar a{
@@ -162,15 +174,69 @@ main{
     font-weight: 500;
 
 }
+#ingresar::before {
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    transition: all 0.3s ease-in-out 0s;
+    background: var(--Viridian-green);
+    background: linear-gradient(90deg, var(--Viridian-green) 0%,var(--Orange) 100%);
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+      transform: translate(-50%, -50%);
+    }
 
+
+  
+  #ingresar:hover, #ingresar:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  #ingresar::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid var(--Viridian-green);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
 /*Resolución tabletas*/
-@media screen and(min-width:768px) {
+@media screen and (min-width:768px) {
     #box-login{
         max-width:90%;
-        margin:10px 150px 0 150px;
+        margin: 10% 15% 0 15%;
     }
     .volver{
-        margin: 140px 60px 0 500px;
+        justify-self: unset;
+        margin: 0 250px;
 
 }
 .box-login{
@@ -179,7 +245,15 @@ main{
 
 
 /*Resolución media*/
-@media screen and(min-width:1024px) {
+@media screen and (min-width:1024px) {
+    #box-login{
+        max-width:90%;
+        margin: 10% 30% 0 30%;
+    }
+    .boton{
+        margin-bottom: 1rem;
+    margin-left: 18rem;
+    }
     
 }
 

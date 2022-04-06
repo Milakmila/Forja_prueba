@@ -24,34 +24,47 @@ p{
    font-size: 1em;
 }
 .superior{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 20% 20% ;
     background-color:#18182a;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    height: 197px;
 
 }
 .superior img{
     margin-right: 90rem;
+    margin-bottom: 2rem;
 }
 .superior i{
     background-color: white;
     padding: 0.8rem;
     align-items: flex-end;
-    margin: 0.9rem ;
     border-radius: 50%;
     border-color: #2CA3AB;
     border-style: solid ;
     border-width: 2px;
 }
+.user {
+    grid-row: 2;
+
+}
+.off{
+    grid-row: 2;
+    grid-column: 2;
+
+}
 
 .abajosub{
+    display: none;
     margin-top: 1px;
-}  
+} 
+.franja{
+    max-width: 100%;
+} 
 #botones{
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 28rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+
 }
 #distancia{
     margin-top: 120px;
@@ -105,45 +118,60 @@ p{
     font-weight: 400;
     font-size: 2rem;
 }
-#table{
-    margin: 15px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  
+.table-box{
+    display: grid;
+    grid-template-areas: 
+    "container-table1"
+    "container-table2";
 }
-table{
-    background-color: #2CA3AB;
+.container-table1{
+    grid-area: container-table1;
+}
+.container-table2{
+    grid-area: container-table2;
 }
 
-#table th {
-    background-color: #1D1B45;
-    color: white;
-    padding: 0.9rem 2rem;
-    font-weight: 400;
-}
-#table td {
-    background-color: #C4C4C4;
-}
-.form-group3{
-    margin:0.3rem 3rem;
+#container-table{
+    display: grid;
+    width: 90%;
+    max-width: 50px auto;
+    grid-template-columns: repeat(3, 100px) ;
+    grid-auto-rows: 50px;
+    margin: 5% 10%;
+   
     
+}
+
+
+.table-header{
+    border: 2px solid #2CA3AB;
+    font-weight: bold;
+    font-size: 0.99em;
+    background-color: #18182a;
+    color: white;
+}
+.table-item{
+    background-color: #C4C4C4;
+    border: 3px solid #2CA3AB;
+    font-size: 0.98em;
+
 }
 
 .btn-azul{
     background-color: #2CA3AB;
     border-radius: 4px;
-    height: 2rem;
     border-color: #2CA3AB;
     border-style: solid ;
     border-width: 1px;
     outline: none;
     margin-right: 0.4rem;
+
+}
+.btn-azul h4{
+    display: none;
 }
 .btn-rojo{
-    height: 2.1rem;
+
     font-weight: 500;
     background-color: #A40101;
     border-radius: 4px;
@@ -153,4 +181,64 @@ table{
     outline: none;
     color: white;
     text-decoration: none;
+}
+.btn-rojo h4{
+    display: none;
+}
+
+.footp{
+    padding: 1rem;
+    max-width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-align: center;
+}
+
+
+
+/*Resolución tabletas*/
+@media screen and (min-width:768px) {
+    #container-table{
+        grid-template-columns: repeat(6, 100px) ;
+        grid-column: initial;
+        max-width: 100%;
+    }
+.table-box{
+    grid-template-areas: 
+    "container-table1 container-table2";
+}
+
+.btn-azul{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+.btn-azul h4{
+    display: block;
+    color: white;
+}
+
+.btn-azul i{
+    padding: 0rem 0.3rem;
+    color: white;
+    grid-column: 2;
+
+}
+.btn-rojo{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+.btn-rojo h4{
+    display: block;
+    color: white;
+}
+
+.btn-rojo i{
+    padding: 0rem 0.3rem;
+    color: white;
+    grid-column: 2;
+
+
 }

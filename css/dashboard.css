@@ -14,6 +14,7 @@
 body{
     font-family:'Poppins', sans-serif;
     font-size: 1em;
+    text-align: center;
 }
 h1,h2,h3{
     color: var(--Orange);
@@ -24,13 +25,7 @@ p{
    font-size: 1em;
 }
 /*index*/
-header{
-    display: grid;
-}
-button{
-    font-family:'Poppins', sans-serif;
 
-}
 a:link{color:black}
 a:visited {color:black}
 a:focus{color: #A40101;}
@@ -40,18 +35,37 @@ a:focus{color: #A40101;}
     grid-template-areas: 
     "user"
     "left"
-    "info";
+    "info"
+    "abajo";
 }
 nav{
     grid-area: left;
     display: grid;
     align-items: center;
     background-color: #1c1d36 ;
-    max-width:21em;
+    width: 100%;
+    animation: draw 500ms linear 1s forwards;
   
+}
+
+@keyframes up {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
+
+@keyframes draw {
+	
+	100% {
+		width: 100%;
+	}
+	
 }
 #izquierda img{
     align-self: center;
+    justify-self: center;
     
 }
 #izquierda i{
@@ -62,8 +76,10 @@ nav{
 
 }
 
+
+
 #izquierda h4{
-    margin: 0rem 0rem
+    margin: 0rem 0rem;
 }
 #chk-menu{
     display: none;
@@ -86,14 +102,14 @@ nav{
 }
 
 .box-izquierda{
-    padding: 0.2rem;
+    padding: 0.3rem;
     text-decoration: none;
     color: white;
     display: grid;
     text-align: center;
     justify-self: center;
     background-color: #C4C4C4;
-    margin: 1rem auto;
+    margin: 1rem 1rem;
     border-radius: 10px;
     border-color: var(--Orange);
     border-style: solid ;
@@ -115,11 +131,11 @@ nav{
 
 
 .user{
-    max-width: 100%;
-    border: 2px solid red;
-    grid-area: user;
     display: grid;
-    grid-template-columns: 1.5% 8%;
+    max-width: 100%;
+    grid-area: user;
+    justify-self:end;
+    grid-template-columns: 20% 19%;
     grid-template-rows: 1fr;
     background: linear-gradient(to bottom , #C4C4C4,white);
     background-color: #C4C4C4;
@@ -131,8 +147,8 @@ nav{
     display: grid;
     align-items: center;
     justify-content: center;
-    max-width: 37px;
-    min-height: 37px;
+    max-width: 100%;
+    min-height: 100%;
     border-radius: 50%;
     border-color: var(--Orange);
     background-color: white;
@@ -144,32 +160,28 @@ nav{
     grid-column: 2;
     grid-row: 1/3;
     align-items: center;
+    text-align: justify;
 }
 
 
 .principal{
     grid-area: info;
-    max-width: 11%;
-    
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-    
+  
 }
 .principal h2{
-    text-align: center;
-    margin-top:3rem ;
-    font-size: 3em;
+    margin:3rem ;
+    font-size: 2.3em;
     font-weight: 400;
 }
 
 .botones{
     display: grid;
-  grid-template-areas: 
-  "search search"
-  "btn-search btn-reload";
-  grid-template-rows: 50% 50%;
-  grid-template-columns:50% 50%;
-
+    grid-template-areas: 
+    "search search"
+    "btn-search btn-reload";
+    grid-template-rows:  50%;
+    grid-template-columns: 50% ;
+    width:280px;
 }
 .botones button {
     min-width: 3rem;
@@ -182,11 +194,8 @@ nav{
 }
 
 #search {
-    align-self: center;
-    justify-self: center;
+    width:350px;
    grid-area: search;
-    max-width: 360px;
-   text-align: left;
    border-width: 1px;
    font-size:1.2em ;
    border-color: white;
@@ -194,21 +203,36 @@ nav{
    border-bottom: 2px var(--Cadet);
    padding-left: 1.5rem;
    border-style: groove;
-   border: 2px solid red;
+   grid-column: 1/3;
+   margin-bottom: 20px;
+   margin-left: 60px;
 
    
 }
+.btn-reload{
+    grid-area: btn-reload;
+   
+}
 .btn-search{
-    border: 2px solid red;
     grid-area: btn-search;
+
    
 
 }
 .btn-reload{
-    border: 2px solid red;
     grid-area: btn-reload;
  
   
+}
+.buscar2{
+    width: 2.5rem;
+    height: 1.8rem;
+    background-color: var(--Cadet);
+    border-color: var(--Viridian-green);
+    border-width: 3.5px;
+    border-radius: 5px;
+   
+
 }
 .buscar{
     color: white;
@@ -218,57 +242,112 @@ nav{
     color: white;
 }
 .guerreros {
-    margin: 10rem 90rem;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
     opacity: .5;
     }
-
+.guerreros img{
+    max-width: 200px;
+    float: right;
+}
 #abajo{
-    position: relative;
-    left:0rem ;
-    bottom: 7.5rem;
+    grid-area: abajo;
+
 
 }
-#barra img{
-    flex-basis:90%;
-    position: absolute;
-    bottom:0;
-    max-width: 98%;
-    max-height: 98%;
+#abajo img{
+    width: 100%;
 }
+
 
 /*Resolución tabletas*/
 @media screen and (min-width:768px) {
     #izquierda{
-        min-width:20px ;
         max-width:16em ;
 
     }
     #izquierda img{
         max-width: 90%;
     }
+    .items{
+        width: 34vw;
+    }
     .box-izquierda{
-        min-width: 10em;
+        min-width: 1em;
     }
     .dashboard{
         grid-template-areas: 
     "left info user"
+    "abajo abajo abajo"
 ;
     grid-template-columns: 36% 48% 15%;
     grid-template-rows: 110% 60px 40%;
 
     }
+    .user{
+        display: grid;
+        max-width: 100%;
+        max-height: 10%;
+        grid-area: user;
+        justify-self: center;
+        grid-template-columns: 20% 19%;
+        grid-template-rows: 50px;
+    }
+    .principal{
+        display:grid;
+        grid-template-columns: 80%;
+
+    }
+    .btn-search{
+        align-self: flex-end;
+    }
+    .btn-reload{
+        align-self: flex-end;
+    }
     .guerreros{
-        background-image: ;
+        grid-column: 2/4;
+
+
     }
     
 }
 
 /*Resolución media*/
 @media screen and (min-width:1024px) {
+    nav{
+        height: 600px;
+        float: left;
+    }
+    .dashboard{
+        grid-template-rows: 84% 30px 40%;
+    }
+    .chk-menu{
+        display: none;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .items{
+        display: block;
+        width: 19vw;
+        
+    }
+    .botones{
+      display: grid;
+      grid-template-areas: 
+      "search btn-search btn-reload";
+      grid-template-columns: auto 20% 20%;
+      grid-template-rows: auto;
     
+    }
+    .guerreros{
+        position: relative;
+        top: 140px;
+    }
+    .abajo{
+        position: relative;
+        bottom: 100px;
+        top: 5%;
+    }
 }
 
 /*Resolución macro*/

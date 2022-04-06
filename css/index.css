@@ -31,6 +31,7 @@ button{
     font-family:'Poppins', sans-serif;
 
 }
+
 .header{
     justify-self: center;
     grid-template-areas: 
@@ -41,6 +42,7 @@ button{
     "ubicacion"
     "linea";
 }
+
 .logo{
     grid-area:"logo" ;
     justify-self: center;
@@ -48,10 +50,31 @@ button{
 }
 .LogoVacuna {
     grid-area:"logovacuna" ;
-    max-width: 20%;
     color: #F3610E;
-    justify-self: center;
-    justify-items: center;
+    position: relative;
+    left: 230px;
+    animation-name: shakeit;
+    animation-duration: 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes shakeit {
+    12.5% {left: -50px;}
+    25% {left: 50px;}
+    37.5% {left: -25px;}
+    50% {left: 25px;}
+    62.5% {left: -10px;}
+    75% {left: 10px;}
+}
+
+/* Standard syntax */
+@keyframes shakeit {
+    12.5% {left: -50px;}
+    25% {left: 50px;}
+    37.5% {left: -25px;}
+    50% {left: 25px;}
+    62.5% {left: -10px;}
+    75% {left: 10px;}
 }
 
 .boton{
@@ -142,7 +165,7 @@ button{
     }
 
 .franja{
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
     
 }
@@ -184,16 +207,20 @@ button{
     }
 .lista{
     display: grid;
+    justify-content: center;
 }
     .lista ul{
         list-style: none;
         font-size: 1em;
+        
     }
     .check{
         max-width: 38px;
         margin-right: 0.5rem;
+        
     }
     .lista li{
+        margin: 2% 10%;
         text-align: center;
         padding-bottom: 1em;
 
@@ -217,12 +244,13 @@ button{
 }
 .quehacerinfo img{
     max-width:150px;
-    justify-self: center;
+    justify-self: center
     
 }
 .quehacerinfo a{
     color: rgba(11, 87, 149,1) ;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #tips{
@@ -265,7 +293,8 @@ button{
     }
     .LogoVacuna {
         max-width: 40%;
-        justify-self: left;
+        position: relative;
+       right: 140px;
       
     }
     .boton{
@@ -282,14 +311,12 @@ button{
     .telefono{
         display: grid;
         grid-template-columns: 5em 8em;
-          border: 2px solid red;
     }
     .telefono img{
         align-self: center;
     }
     .ubicacion{
         display: grid;
-        border: 2px solid red;
         grid-template-columns: 50px 280px;
         
     }
@@ -300,6 +327,10 @@ button{
     }
     .texto h1{
         font-size: 2.5em;
+    }
+    #abajo img{
+        width: 100%;
+        grid-row: 3;
     }
 
     #infos{
@@ -313,15 +344,16 @@ button{
         justify-self: left;
     
     }
-}
+   
+    
 
 /*Resolución media*/
 @media screen and (min-width:1024px) {
     body{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     button{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .header{
         grid-template-areas: 
@@ -334,13 +366,40 @@ button{
     }
     .logo{
         justify-self:left;
+        grid-column: 1;
+        grid-row: 2;
     }
     .LogoVacuna {
-        border: 2px solid pink;
         max-width: 40%;
-        justify-self: left;
-      
+        justify-self: left; 
+        grid-column: 2;
+        grid-row: 2;
     }
+    .boton{
+        grid-column: 3;
+        grid-row: 2;
+
+    }
+    .telefono{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .ubicacion{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    }
+    .texto{
+        text-align: center;
+        font-size: 1em;
+    }
+    .texto h1{
+        grid-column: 1 ;
+    }
+    .franja{
+        grid-column: 1;
+        max-width: 100%;
     }
     #tips{
         border-bottom: 1rem solid white;
@@ -351,8 +410,7 @@ button{
     }
 
 
-    
-    
+   
 }
 
 /*Resolución macro*/
